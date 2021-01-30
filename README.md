@@ -17,7 +17,7 @@
 | --------- | --------- | ----------- |
 | text      | text      | null: false |
 | user      | reference |             |
-| prototype | reference |             |
+| prototype | reference | null: false, foreign_key: true |
 
 
 
