@@ -46,6 +46,7 @@
             <% end %>
            <% end %> 
         <%# // ログインしているユーザーには上記を表示する %>
+      <% if user_signed_in? %>
         <ul class="comments_lists">
           <%# 投稿に紐づくコメントを一覧する処理を記述する %>
           <% @comments.each do |comment| %>
@@ -55,6 +56,7 @@
             </li>
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
           <% end %>
+      <% end %>  
         </ul>
       </div>
     </div>
