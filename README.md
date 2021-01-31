@@ -11,6 +11,16 @@
 | occupation | text   | null: false |
 | position   | text   | null: false |
 
+###Association
+- has_many :comments
+- has_many :prototype
+
+
+
+
+
+
+
 ## comments テーブル
 
 | Column    | Type      | Options     |
@@ -18,6 +28,10 @@
 | text      | text      | null: false |
 | user      | reference |             |
 | prototype | reference | null: false, foreign_key: true |
+
+###Association
+- belongs_to :user
+- belongs_to :prototype
 
 
 
@@ -35,3 +49,6 @@
 | image         |            |             |
 | user          | references |             |
 
+###Association
+- belongs_to :user
+- has_many :comments
